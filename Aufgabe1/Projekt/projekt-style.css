@@ -5,7 +5,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh; /* Hier kannst du die Höhe des Bildes anpassen */
+    height: 35px; /* Hier kannst du die Höhe des Bildes anpassen */
   }
 .container{
     width: 50%;
