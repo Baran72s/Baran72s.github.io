@@ -67,6 +67,13 @@ nav ul li a:hover {
 .dropdown-content a:hover {
     background-color: #111;
 }
+.image-text {
+  display: none;
+}
+
+.image-wrapper:hover .image-text {
+  display: block;
+}
 
 nav ul li:hover a {
     font-size: 20px; 
