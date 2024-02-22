@@ -1,40 +1,73 @@
-.container {
-  text-align: center;
+body{
+    background-color: black;
+}
+.container{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+h1{
+    font-size: 43px;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+}
+nav {
+    text-align: center;
 }
 
-.navbar {
-  display: inline-block;
-  background-color: #333;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: inline-block;
 }
 
-.navbar a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Courier New", Courier, monospace;
+}
+
+nav ul li a:hover {
+    background-color: #111;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
 }
 
 .dropdown-content a {
-  font-size: 16px; /* Ändere hier die Schriftgröße */
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content a:hover {
-  font-size: 18px; /* Ändere hier die Schriftgröße beim Hover */
+    background-color: #111;
+}
+
+nav ul li:hover a {
+    font-size: 20px; /* Beispielgröße, kann angepasst werden */
 }
