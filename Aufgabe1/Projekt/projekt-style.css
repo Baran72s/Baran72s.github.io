@@ -1,10 +1,14 @@
 body{
     background-color: black;
+    
 }
 .container{
     width: 50%;
     margin: 0 auto;
     text-align: center;
+    body {
+  color: white;
+}
 }
 h1{
     font-size: 43px;
