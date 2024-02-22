@@ -1,6 +1,12 @@
 body{
     background-color: black;
 }
+ .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hier kannst du die Höhe des Bildes anpassen */
+  }
 .container{
     width: 50%;
     margin: 0 auto;
