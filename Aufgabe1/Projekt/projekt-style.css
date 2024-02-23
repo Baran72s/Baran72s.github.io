@@ -80,3 +80,8 @@ nav ul li a:hover {
 nav ul li:hover a {
     font-size: 20px; 
 }
+
+.hover-image {
+    width: 25%;
+    
+}
