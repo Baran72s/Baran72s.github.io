@@ -77,19 +77,20 @@ nav ul li a:hover {
     background-color: #111;
 }
 .image-text {
-  display: none;
-    position: absolute;
-  background-color: #333;
+  display: block;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  height: 100%;
   color: white;
   padding: 10px;
-  width: 30%;
-  margin-top: -100px;
 }
 
-.image-wrapper:hover .image-text {
-  display: inline-block;
-    position: relative;
-    
+.image-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: fit-content;
+    margin-bottom: 8px;
 }
 
 nav ul li:hover a {
@@ -98,16 +99,16 @@ nav ul li:hover a {
 
 .hover-image {
     width: 30%;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  margin-right: 50px;
-  margin-left: 25px;
+
 }
 
-body {
+.m5background {
   background-image: url('https://i.pinimg.com/originals/3c/41/9b/3c419bd949a8f909041025d8bc325f07.jpg');
   background-size: cover;
   background-position: center;
+  position: fixed;
   height: 100vh;
+  width: 100vw;
+  z-index: -1000;
 }
 
