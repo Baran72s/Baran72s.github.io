@@ -107,7 +107,6 @@ nav ul li:hover a {
 .m5background {
   background-image: url('https://i.pinimg.com/originals/3c/41/9b/3c419bd949a8f909041025d8bc325f07.jpg');
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   height: 100vh;
 }
