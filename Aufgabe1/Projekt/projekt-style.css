@@ -83,7 +83,7 @@ nav ul li a:hover {
   color: white;
   padding: 10px;
   width: 30%;
-  margin-top: -80px;
+  margin-top: 80px;
 }
 
 .image-wrapper:hover .image-text {
