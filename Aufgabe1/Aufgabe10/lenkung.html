@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="https://biblehrer.github.io/Aufgaben/park.css">
+    <title> Dog Park </title>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/ball.png" id="ball">
+    <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/Dog.png" id="dog" style="position: relative; top: 0px; left: 0px;">
 
+    <div>
+        <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-up.png" class="up" onclick="moveUp()">
+        <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-down.png" class="down" onclick="moveDown()">
+        <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-right.png" class="right" onclick="moveRight()">
+        <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-left.png" class="left" onclick="moveLeft()">
+    </div>
+</body>
+
+<script>
+    // JavaScript functions for the button clicks
+    function moveUp() {
+        var dog = document.getElementById("dog");
+        var topPosition = parseInt(dog.style.top) || 0;
+        dog.style.top = (topPosition - 50) + "px";
+    }
+
+    function moveDown() {
+        var dog = document.getElementById("dog");
+        var topPosition = parseInt(dog.style.top) || 0;
+        dog.style.top = (topPosition + 50) + "px";
+    }
+
+    function moveRight() {
+        var dog = document.getElementById("dog");
+        var leftPosition = parseInt(dog.style.left) || 0;
+        dog.style.left = (leftPosition + 50) + "px";
+    }
+
+    function moveLeft() {
+        var dog = document.getElementById("dog");
+        var leftPosition = parseInt(dog.style.left) || 0;
+        dog.style.left = (leftPosition - 50) + "px";
+    }
+</script>
+</html>
