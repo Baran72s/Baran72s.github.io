@@ -1,74 +1,80 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <link rel="stylesheet" href="https://biblehrer.github.io/Aufgaben/park.css">
-    <title> Dog Park </title>
-</head>
-<body>
-    <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/ball.png" id="ball" style="position: absolute;">
-    <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/Dog.png" id="dog" style="position: relative; top: 0px; left: 0px;">
+  <head>
+    <link rel="stylesheet" href="https://biblehrer.github.io/Aufgaben/park.css" />
+    <title>Dog Park</title>
+  </head>
+  <body>
+    <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/ball.png" id="ball" />
+    <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/Dog.png" id="dog" />
 
     <div>
-        <button class="up" onmousedown="moveDog('up')"></button>
-        <button class="down" onmousedown="moveDog('down')"></button>
-        <button class="right" onmousedown="moveDog('right')"></button>
-        <button class="left" onmousedown="moveDog('left')"></button>
+      <img
+        src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-up.png"
+        class="up"
+        onclick="dog('up')"
+      />
+      <img
+        src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-down.png"
+        class="down"
+        onclick="dog('down')"
+      />
+      <img
+        src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-right.png"
+        class="right"
+        onclick="dog('right')"
+      />
+      <img
+        src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-left.png"
+        class="left"
+        onclick="dog('left')"
+      />
     </div>
 
     <script>
-        // JavaScript functions for the button clicks
-        function moveDog(direction) {
-            var dog = document.getElementById("dog");
-            var ball = document.getElementById("ball");
-            var dogTop = parseInt(dog.style.top) || 0;
-            var dogLeft = parseInt(dog.style.left) || 0;
-            var ballTop = parseInt(ball.style.top) || 0;
-            var ballLeft = parseInt(ball.style.left) || 0;
+      let dog = (direction) => {
+        const dogImage = document.getElementById("dog");
+        const ballImage = document.getElementById("ball");
+        const dogTop = parseInt(dogImage.style.top || 0);
+        const dogLeft = parseInt(dogImage.style.left || 0);
+        const ballLeft = parseInt(ballImage.style.left || 0);
+        const ballTop = parseInt(ballImage.style.top || 0);
 
-            // Move the dog in the specified direction
-            switch (direction) {
-                case 'up':
-                    dog.style.top = (dogTop - 50) + 'px';
-                    break;
-                case 'down':
-                    dog.style.top = (dogTop + 50) + 'px';
-                    break;
-                case 'right':
-                    dog.style.left = (dogLeft + 50) + 'px';
-                    break;
-                case 'left':
-                    dog.style.left = (dogLeft - 50) + 'px';
-                    break;
-            }
-
-            // Check if the dog has collided with the ball
-            if (Math.abs(dogTop - ballTop) < 50 && Math.abs(dogLeft - ballLeft) < 50) {
-                // Randomly place the ball on the screen
-                ball.style.top = Math.floor(Math.random() * (window.innerHeight - 50)) + 'px';
-                ball.style.left = Math.floor(Math.random() * (window.innerWidth - 50)) + 'px';
-            }
-
-            // Prevent the dog from leaving the screen
-            if (dog.offsetTop < 0) {
-                dog.style.top = '0px';
-            }
-            if (dog.offsetTop + dog.offsetHeight > window.innerHeight) {
-                dog.style.top = (window.innerHeight - dog.offsetHeight) + 'px';
-            }
-            if (dog.offsetLeft < 0) {
-                dog.style.left = '0px';
-            }
-            if (dog.offsetLeft + dog.offsetWidth > window.innerWidth) {
-                dog.style.left = (window.innerWidth - dog.offsetWidth) + 'px';
-            }
+        switch (direction) {
+          case "up":
+            dogImage.style.top = dogTop - 50 + "px";
+            break;
+          case "down":
+            dogImage.style.top = dogTop + 50 + "px";
+            break;
+          case "right":
+            dogImage.style.left = dogLeft + 50 + "px";
+            break;
+          case "left":
+            dogImage.style.left = dogLeft - 50 + "px";
+            break;
+          default:
+            break;
         }
 
-        // Set up an interval function to move the ball randomly
-        setInterval(function() {
-            var ball = document.getElementById("ball");
-            ball.style.top = Math.floor(Math.random() * (window.innerHeight - 50)) + 'px';
-            ball.style.left = Math.floor(Math.random() * (window.innerWidth - 50)) + 'px';
-        }, 2000);
+        // Move the ball in the same direction as the dog
+        switch (direction) {
+          case "up":
+            ballImage.style.top = ballTop - 25 + "px";
+            break;
+          case "down":
+            ballImage.style.top = ballTop + 25 + "px";
+            break;
+          case "right":
+            ballImage.style.left = ballLeft + 25 + "px";
+            break;
+          case "left":
+            ballImage.style.left = ballLeft - 25 + "px";
+            break;
+          default:
+            break;
+        }
+      };
     </script>
-</body>
+  </body>
 </html>
